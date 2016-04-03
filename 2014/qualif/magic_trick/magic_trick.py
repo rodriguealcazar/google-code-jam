@@ -16,9 +16,8 @@ class InputReader:
                    self._parse_rows())
 
     def _parse_rows(self):
-        return [
-            set(self.input_file.readline().strip().split(' ')) for i in range(4)
-        ]
+        return [set(self.input_file.readline().strip().split(' '))
+                    for i in range(4)]
 
     def _parse_answer(self):
         return int(self.input_file.readline())

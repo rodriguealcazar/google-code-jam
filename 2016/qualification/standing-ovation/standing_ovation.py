@@ -27,7 +27,7 @@ class Solver:
 
         number_test_cases = int(input_file.readline())
         for _ in range(number_test_cases):
-            audience_string = input_file.readline().strip().split(" ")[1:][0]
+            audience_string = input_file.readline().strip()[2:]
             self.standing_ovations.append(StandingOvation([int(x) for x in audience_string]))
 
     def solve_all(self):

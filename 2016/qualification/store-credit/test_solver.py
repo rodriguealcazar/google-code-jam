@@ -27,4 +27,4 @@ class TestSolver(TestCase):
 
         solutions = Solver(StringIO(TEST_INPUT)).solve()
 
-        self.assertEqual(expected_solutions, solutions)
+        self.assertEqual(expected_solutions, [x for x in solutions])

@@ -1,5 +1,4 @@
 import sys
-from itertools import islice
 
 
 class TestCase:
@@ -21,10 +20,8 @@ class Solver:
             self._parse_test_case(input_file)
 
     def solve(self):
-        solutions = []
         for test_case in self.test_cases:
-            solutions.append(self._solve_test_case(test_case))
-        return solutions
+            yield self._solve_test_case(test_case)
 
     def _solve_test_case(self, test_case):
         for i, first in enumerate(test_case.items):

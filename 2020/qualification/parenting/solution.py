@@ -16,13 +16,17 @@ def assign_activities(activities):
     return [a[1] for a in assigned_activities]
 
 
-test_case_count = int(input())
-for i in range(test_case_count):
-    activities_count = int(input())
-    activities = []
-    for j in range(activities_count):
-        start_end = input().split(' ')
-        activities.append((j, int(start_end[0]), int(start_end[1])))
-    schedule = assign_activities(activities)
-    print("Case #{}: {}".format(i + 1, ''.join(schedule)))
+def main():
+    test_case_count = int(input())
+    for i in range(test_case_count):
+        activities_count = int(input())
+        activities = []
+        for j in range(activities_count):
+            start_end = input().split(' ')
+            activities.append((j, int(start_end[0]), int(start_end[1])))
+        schedule = assign_activities(activities)
+        print("Case #{}: {}".format(i + 1, ''.join(schedule)))
 
+
+if __name__ == "__main__":
+    main()

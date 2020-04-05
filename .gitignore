@@ -36,3 +36,6 @@ coverage.xml
 
 # Vim
 *.swp
+
+# Pycharm
+.idea/
